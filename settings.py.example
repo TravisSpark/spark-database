@@ -1,6 +1,6 @@
 
 """
-Configuration of database and python values
+Address to SQL Database
 """
 
 DATABASE = {
@@ -8,6 +8,6 @@ DATABASE = {
     'host':'localhost',
     'port':'5432',
     'username': 'postgres',
-    'password': '3edc4rfv',
+    'password': '',
     'database': 'spark-database'
 }
