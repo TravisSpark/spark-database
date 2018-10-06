@@ -1,0 +1,5 @@
+alembic==1.0.0
+sqlalchemy==1.2.8
+pylint==1.9
+psycopg2==2.7.5
+pick==0.6.4
