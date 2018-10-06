@@ -1,9 +1,31 @@
 """
-Hold Objects for SQL Tables
+Hold Objects for SQL Tables and Manage Database Session
 """
+import sys
+sys.path.insert(0, './')
+import settings
+
 import sqlalchemy as sa
 from sqlalchemy.orm import validates
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.engine.url import URL
+from contextlib import contextmanager
+from sqlalchemy.orm import sessionmaker
+
+ENGINE = sa.create_engine(URL(**settings.DATABASE))
+SESSION = sessionmaker(bind=ENGINE)
+
+@contextmanager
+def session_scope():
+    """ Control the SQL Database Session  """
+    session = SESSION()
+    try:
+        yield session
+        session.commit()
+    except:
+        session.rollback()
+    finally:
+        session.close()
 
 Base = declarative_base()
 
