@@ -15,7 +15,7 @@ def choose_function():
     """
     Determine action to be performed by the user
     """
-    title = "Choose a function or Press CTRL+C to quit: "
+    title = "Choose a function: "
     options = FUNCTIONS_LIST
     return pick(options, title)
 
@@ -25,22 +25,20 @@ def choose_repeat():
     """
     title = "Would you like to enter another function?"
     options = ['yes', 'no']
-    return pick(title, options)
+    return pick(options, title)
 
 def main():
     """
     Control the flow of the database management
     """
-    try: 
+    repeat = 'yes'
+    while repeat=='yes':
         with models.session_scope() as session:
-            repeat = True
-            while repeat:
-                selection, index = choose_function()
-                print(f"You chose {selection}, choice #{index}")           
-                selection(session)
-                input("Press Enter to continue or CTRL+C to quit") 
-    except KeyboardInterrupt:
-        print("Quit")
+            selection, index = choose_function()           
+            selection(session)
+        input("Press Enter to continue...")
+        repeat, index = choose_repeat()
+    
 
 if __name__=="__main__":
     main()

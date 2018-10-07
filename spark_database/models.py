@@ -22,8 +22,10 @@ def session_scope():
     try:
         yield session
         session.commit()
+        print("sql command succeeded")
     except:
         session.rollback()
+        print("sql command failed")
     finally:
         session.close()
 

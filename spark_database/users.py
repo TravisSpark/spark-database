@@ -37,7 +37,6 @@ def user_input():
 def add_user(session):
     user_data = user_input()
     session.add(models.User(**user_data))
-    print("added user data")
 
 def show_all_users(session):
     all_users = session.query(models.User).all()
