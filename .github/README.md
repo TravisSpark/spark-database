@@ -12,9 +12,9 @@ This database allows Phoenix Spark to consistently, reliably, and easily documen
 2. Run main.py from the Command Line:
    * ```(sudo) python3 spark_database/main.py```
 3. The program will prompt the user with three options.
-   * '''<function add_user at 0x7f6f41928c80>'''
-   * '''<function show_all_users at 0x7f6f41928d08>'''
-   * '''<function search_for_user at 0x7f6f41928d90>'''
+   * ```<function add_user at 0x7f6f41928c80>```
+   * ```<function show_all_users at 0x7f6f41928d08>```
+   * ```<function search_for_user at 0x7f6f41928d90>```
 4. *add_user* will lead to a prompts to input user information. There is an opportunity to change incorrect information.
    * **BUG ALERT** [Issue #4 Unable to leave Email + RFID Null](https://github.com/TravisSpark/spark-database/issues/4)
 5. *show_all_users* prints to the console the contact information for every user
