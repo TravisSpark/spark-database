@@ -9,6 +9,108 @@ For new developers, an overview of essential programming concepts are available 
 - [Development Tools](https://github.com/TravisSpark/spark-website/wiki/Development-Tools)
 - [Version Control](https://github.com/TravisSpark/spark-website/wiki/Collaboration#version-control)
 
+## Local Setup
+
+Update BASH
+
+```sudo apt-get update```
+
+### Download Local copy of Spark-Database 
+
+Install git to manage software versions
+
+```sudo apt install git```
+
+[Fork](https://guides.github.com/activities/forking/) the [spark-database repository](https://github.com/travisspark/spark-database)
+
+[Clone](https://help.github.com/articles/cloning-a-repository/) the personal repository
+
+```git clone https://github.com/[YOUR-ACCOUNT]/spark-database.git```
+
+Switch to project directory:
+
+```cd spark-database```
+
+Add the production repository:
+
+```git remote add upstream https://github.com/travisspark/spark-database.git```
+
+Check both repositories are present:
+
+```git remote -v```
+
+Conventionally, personal repositories are labeled *origin*. publication repositories are labeled *upstream*
+Checkout a new branch before making edits:
+
+```git checkout -b [clear-concise-branch-name]```
+
+### Python
+
+Version 3.6.5
+
+```sudo apt install python3``` 
+
+Python Pip3 to install Python requirements
+
+```sudo apt install python3-pip```
+
+### Virtual Environment 
+
+Install
+
+```sudo apt install virtualenv```
+
+Create a virtual envirnment named *venv*. Make sure to be in spark-database directory.
+
+```virtualenv -p python3 venv ```
+
+Activate the virtual environment.
+
+```source venv/bin/activate```
+
+### Python Dependencies
+
+Use pip3 to install the required Python packages into the virtual environment.
+
+```pip3 install -r requirements.txt```
+
+### Database
+
+Install PostgreSQL 
+
+```sudo apt install postgresql-client-10```
+
+Check Install
+
+```psql --version```
+
+Local Server Install
+
+```sudo apt-get install postgresql postgresql-contrib```
+
+Activate Postgres
+
+```sudo -u postgres psql postgres```
+
+If exeperiencing trouble
+
+```sudo apt install postgresql-common```
+
+```sudo pg_ctlcluster 10 main start```
+
+Set a password
+
+```\password```
+
+*enter password*
+
+Create database
+
+```sudo -u postgres createdb spark-database```
+
+Don't be alarmed by:
+"*WARNING:  could not flush dirty data: Function not implemented*"
+
 ## Python
 Python is becoming increasingly more popular. It is a high level language that is open source, relatively friendly to beginners, facilitates quick project development, is highly versatile, and well supported by its community. Consequently, it is applied to fields as diverse as website development and machine learning. 
 
@@ -22,7 +124,7 @@ Update BASH
 * ```sudo apt-get update```
 
 Install Python Version Three
-* ```sudo apt-get python3```
+* ```sudo apt install python3```
 
 ## Relational Databases
 * Purpose of Relational Databases
