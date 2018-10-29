@@ -1,34 +1,27 @@
-# Welcome to the Spark-Database Contributing Document
-This file outlines the role of the software used by spark-database, how to set up a local version of the repository, and how to contribute to the development and maintainence of the project.
+# Contributing
+This file outlines the software used by spark-database, how to set up a local version of the repository, and how to contribute to the development and maintainence of the project.
 
-Guide
-* [Using the Database](#using-the-database)
+## Guide
+* [Software](#software)
 * [Programming Concepts](#programming-concepts)
-* [Software Tools](#software-tools)
 * [Local Setup](#local-setup)
 * [Database Migration](#database-migration)
 
-Software versions
-* Python 3.6.6
-* PostgreSQL 10.5
+## Software
+* [Python 3.6](https://www.python.org/about/gettingstarted/)
+* [PostgreSQL 10.5](https://www.postgresql.org/about/)
+* [Virtual Environment 15.1.0](https://virtualenv.pypa.io/en/latest/)
+* [SQLAlchemy](https://www.sqlalchemy.org/)
+* [Alembic](https://alembic.zzzcomputing.com/en/latest/#)
+* [Pylint](https://pylint.readthedocs.io/en/latest/intro.html)
+* [Pick](https://github.com/wong2/pick)
 
-
-## Using the Database
-Instructions on interacting with the database are available in the README of the [spark-database code page](https://github.com/TravisSpark/spark-database).
 
 ## Programming Concepts
 For new developers, an overview of essential programming concepts are available at the [spark-website wiki](https://github.com/TravisSpark/spark-website/wiki). While all of the concepts are important, the especially relevant pages are:
 - [Development Tools](https://github.com/TravisSpark/spark-website/wiki/Development-Tools)
 - [Version Control](https://github.com/TravisSpark/spark-website/wiki/Collaboration#version-control)
 
-## Software Tools
-
-* [Virtual Environment](https://virtualenv.pypa.io/en/latest/)
-* [PostgreSQL](https://www.postgresql.org/about/)
-* [SQLAlchemy](https://www.sqlalchemy.org/)
-* [Alembic](https://alembic.zzzcomputing.com/en/latest/#)
-* [Pylint](https://pylint.readthedocs.io/en/latest/intro.html)
-* [Pick](https://github.com/wong2/pick)
 
 ## Local Setup
 
@@ -69,7 +62,7 @@ Command Line instructions will assume use of the Ubuntu Distribution of Linux or
 
 ### Install Python
 
-* Version 3.6.5
+* Version 3.6
 
 ```sudo apt install python3``` 
 
@@ -115,7 +108,7 @@ Command Line instructions will assume use of the Ubuntu Distribution of Linux or
 
 ```sudo -u postgres psql postgres```
 
-* If exeperiencing trouble
+* If experiencing trouble
 
 ```sudo apt install postgresql-common```
 
