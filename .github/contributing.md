@@ -1,16 +1,16 @@
 # Welcome to the Spark-Database Contributing Document
 This file outlines the role of the software used by spark-database, how to set up a local version of the repository, and how to contribute to the development and maintainence of the project.
 
-* Guide
-    * [Using the Database](#using-the-database)
-    * [Programming Concepts](#programming-concepts)
-    * [Software Tools](#software-tools)
-    * [Local Setup](#local-setup)
-    * [Database Migration](#database-migration)
+Guide
+* [Using the Database](#using-the-database)
+* [Programming Concepts](#programming-concepts)
+* [Software Tools](#software-tools)
+* [Local Setup](#local-setup)
+* [Database Migration](#database-migration)
 
-* Software versions
-    * Python 3.6.6
-    * PostgreSQL 10.5
+Software versions
+* Python 3.6.6
+* PostgreSQL 10.5
 
 
 ## Using the Database
@@ -23,43 +23,18 @@ For new developers, an overview of essential programming concepts are available 
 
 ## Software Tools
 
-### Relational Databases
-* Purpose of Relational Databases
-* Real World Implications
-* Software Applications
-
-### Database Engines
-* Maria
-* sqlite
-* postgresql
-* mysql
-* sql
-
-### [Virtual Environment](Link to Overview)
-* Purpose
-* Importance
-* Docker is becoming a new standard
-
-### [SQLAlchemy](Main Documentation)
-* Purpose
-* Importance
-
-### [Alembic](Link to Alembic Tutorial)
-* Importance of Migrating databases
-* Initialize the user table
-
-### [Linting](Link to pylint tutorial)
-* Importance of Linting
-* Commands to lint files, before submitting pull requests
-
-### [Pick](Link to Pick)
-* Utilization of Pick to go beyond text inputs
+* [Virtual Environment](https://virtualenv.pypa.io/en/latest/)
+* [PostgreSQL](https://www.postgresql.org/about/)
+* [SQLAlchemy](https://www.sqlalchemy.org/)
+* [Alembic](https://alembic.zzzcomputing.com/en/latest/#)
+* [Pylint](https://pylint.readthedocs.io/en/latest/intro.html)
+* [Pick](https://github.com/wong2/pick)
 
 ## Local Setup
 
 Command Line instructions will assume use of the Ubuntu Distribution of Linux or Windows Subsystem for Linux (WLS). If using WSL, setup instructions are available at [Microsoft's WSL Documentation](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If using a Mac, System Setup Instructions are avaialble at [Sourabh Bajaj's Blog](http://sourabhbajaj.com/mac-setup/). If on a Military Network, the same information is available on [Sourabh Bajaj's GitHub](https://github.com/sb2nov/mac-setup).
 
-* Update BASH
+### Update BASH
 
 ```sudo apt-get update```
 
