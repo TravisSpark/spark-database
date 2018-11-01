@@ -1,6 +1,7 @@
 # Custom
 settings.py
 alembic.ini
+.vscode/
 
 
 # Byte-compiled / optimized / DLL files
