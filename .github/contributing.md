@@ -120,6 +120,10 @@ Command Line instructions will assume use of the Ubuntu Distribution of Linux or
 
 *enter password*
 
+* Exit Directory
+
+```\q```
+
 * Create database
 
 ```sudo -u postgres createdb spark-database```
@@ -127,4 +131,21 @@ Command Line instructions will assume use of the Ubuntu Distribution of Linux or
 Don't be alarmed by:
 "*WARNING:  could not flush dirty data: Function not implemented*"
 
+## Settings
+
+* Create a copies of ```alembic.ini.example``` and ```settings.py.example```
+* Rename the copies to ```alembic.ini``` and ```settings.py```
+* For ```alembic.ini```, in ```sqlalchemy.url = postgres://postgres:[password]@localhost/spark-database``` replace [password] with the password set for the PostgreSQL User
+* For ```settings.py```, set the ```password:``` value equal to the password set for the PostgreSQL User (same as the alembic.ini password)
+* ```settings.py``` and ```alembic.ini``` are set in ```.gitignore``` to be overlooked when sharing code in git. This is to avoid the passwords being shared.
+
 ## Database Migration
+
+* The database versions have already been setup
+* To initialize the database with the current version, run:
+
+```alembic upgrade head```
+
+## Run the program
+
+```python3 spark_database/main.py```
