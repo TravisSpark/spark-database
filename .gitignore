@@ -2,6 +2,7 @@
 settings.py
 alembic.ini
 .vscode/
+bin
 
 
 # Byte-compiled / optimized / DLL files
