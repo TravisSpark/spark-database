@@ -1,8 +1,8 @@
 """
 Manage user information
 """
-import models
 from pick import pick
+import models
 
 def user_input():
     """
