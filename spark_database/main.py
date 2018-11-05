@@ -4,9 +4,6 @@ Control the flow of the project
 from pick import pick
 import models
 from users import add_user, show_all_users, search_for_user
-import sys
-sys.path.insert(0, './')
-
 
 FUNCTIONS_LIST = [add_user, show_all_users, search_for_user]
 
