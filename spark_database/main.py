@@ -1,13 +1,9 @@
 """
 Control the flow of the project
 """
+from pick import pick
 import models
 from users import add_user, show_all_users, search_for_user
-import sys
-sys.path.insert(0, './')
-import settings
-from pick import pick
-
 
 FUNCTIONS_LIST = [add_user, show_all_users, search_for_user]
 
@@ -32,13 +28,12 @@ def main():
     Control the flow of the database management
     """
     repeat = 'yes'
-    while repeat=='yes':
+    while repeat == 'yes':
         with models.session_scope() as session:
-            selection, index = choose_function()           
+            selection, index = choose_function()
             selection(session)
         input("Press Enter to continue...")
         repeat, index = choose_repeat()
-    
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
